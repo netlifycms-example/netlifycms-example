@@ -1,12 +1,12 @@
-FROM node:9
+FROM keymetrics/pm2:8-alpine
 
 WORKDIR /app
 
 COPY . /app
 
-RUN npm install -g pm2
-RUN yarn install --production
+ENV NPM_CONFIG_LOGLEVEL warn
+RUN npm install --production
 
-EXPOSE 3023
+EXPOSE 3024
 
-CMD ["pm2 start server.js"]
+CMD ["pm2-runtime", "start", "pm2.json"]

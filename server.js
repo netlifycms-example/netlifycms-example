@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const app = express();
 app.use(cors());
 app.use(helmet());
-app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
