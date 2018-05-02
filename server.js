@@ -8,6 +8,10 @@ app.use(helmet());
 app.use(express.static(__dirname + '/static'));
 app.use(express.static(__dirname + '/public'));
 
+app.use(function(req, res, next) {
+  res.status(404).redirect('/404.html');
+});
+
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.json({'errors': {

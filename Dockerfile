@@ -6,6 +6,7 @@ COPY . /app
 
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN npm install --production
+RUN npm run build
 
 EXPOSE 3024
 
