@@ -7,6 +7,6 @@
   "license": "MIT",
   "scripts": {
     "rebuild": "git pull origin master && docker-compose up -d --build",
-    "deploy": "git pull origin master && rsync -av --delete --exclude '.git' ../netlifycms-example/ admin@178.62.234.100:/srv/www/netlifycms-example && ssh admin@178.62.234.100 'cd /srv/www/netlifycms-example; docker-compose up -d --build'"
+    "deploy": "git pull origin master && rsync -av --delete --exclude --ignore-errors '.git'  --exclude 'node_modules' ../netlifycms-example/ admin@178.62.234.100:/srv/www/netlifycms-example && ssh admin@178.62.234.100 'cd /srv/www/netlifycms-example; docker-compose up -d --build'"
   }
 }
