@@ -1,0 +1,12 @@
+{
+  "name": "netlifycms-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/netlifycms-example/netlifycms-example.git",
+  "author": "Primoz Susa <primoz.susa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "rebuild": "git pull origin master && docker-compose up -d --build",
+    "deploy": "git pull origin master && rsync -av --delete --exclude '.git' ../netlifycms-example/ admin@178.62.234.100:/srv/www/netlifycms-example && ssh admin@178.62.234.100 'cd /srv/www/netlifycms-example; docker-compose up -d --build'"
+  }
+}

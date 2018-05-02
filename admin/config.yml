@@ -2,13 +2,13 @@ backend:
   name: github
   repo: netlifycms-example/netlifycms-example
   branch: master
-  base_url: https://github.susa.cloud
+  base_url: https://github.niceclouds.com
 slug:
   encoding: "ascii"
   clean_accents: true
 publish_mode: editorial_workflow
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "static/images/uploads"
+media_folder: "build/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "build/images/uploads"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
