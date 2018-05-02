@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const app = express();
 app.use(cors());
 app.use(helmet());
+app.use(express.static(__dirname + '/static'));
 app.use(express.static(__dirname + '/public'));
 
 app.use(function(err, req, res, next) {

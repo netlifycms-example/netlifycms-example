@@ -6,16 +6,23 @@
   "author": "Primoz Susa <primoz.susa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
+    "start": "batfish start",
+    "build": "batfish build",
     "startprod": "pm2 start server.js",
     "stopprod": "pm2 stop all",
     "rebuild": "git pull origin master",
     "deploy": "git pull origin master && rsync -av --delete --ignore-errors --exclude 'node_modules' ../netlifycms-example/ admin@178.62.234.100:/srv/www/netlifycms-example && ssh admin@178.62.234.100 'cd /srv/www/netlifycms-example; docker-compose up -d --build'"
   },
   "dependencies": {
+    "@mapbox/batfish": "^1.8.1",
     "compression": "^1.7.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "helmet": "^3.12.0"
+    "helmet": "^3.12.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-helmet": "^5.2.0",
+    "rss": "^1.2.2"
   }
 }
