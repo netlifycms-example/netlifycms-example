@@ -8,7 +8,7 @@ slug:
   clean_accents: true
 publish_mode: editorial_workflow
 media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "public/images/uploads"
+public_folder: "images/uploads"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
