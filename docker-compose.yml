@@ -8,5 +8,6 @@ services:
       context: ./
     ports:
       - "3024:3000"
+      - "3025:3025"
     env_file:
       - .env  

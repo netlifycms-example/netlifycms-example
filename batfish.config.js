@@ -4,7 +4,6 @@ module.exports = () => {
   return {
     siteOrigin: 'https://netlifyexample.niceclouds.com',
     pagesDirectory: path.join(__dirname, './pages'),
-    outputDirectory: path.join(__dirname, './public'),
     applicationWrapperPath: path.join(
       __dirname,
       './src/components/layout/AppWrapper.js'

@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(helmet());
 app.use(express.static(__dirname + '/static'));
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/_batfish_site'));
 
 app.use(function(req, res, next) {
   res.status(404).redirect('/404.html');
